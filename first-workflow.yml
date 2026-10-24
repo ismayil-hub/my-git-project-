@@ -1,0 +1,15 @@
+name: My First DevOps Workflow
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Print Welcome Message
+        run: echo "Hello, my CI/CD Pipeline is running successfully on GitHub Actions!"
